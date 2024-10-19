@@ -12,6 +12,10 @@
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     font-family: "Roboto", sans-serif;
 }
 
@@ -25,9 +29,25 @@ body {
 }
 
 .calc-display {
-    flex: 2;
+    width: 360px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    flex: 2 296px;
+}
+
+.screen {
+    font-size: 32px;
+    margin-bottom: 32px;
 }
 
 .calc-body {
-    flex: 3;
+    width: 360px;
+
+    display: flex;
+    flex-direction: column;
+
+    flex: 3 444px;
 }
