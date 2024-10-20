@@ -21,33 +21,67 @@ body {
 
 /* Calculator UI */
 .calc {
-    max-width: 360px;
-    max-height: 740px;
+    width: 360px;
+    height: 100vh;
 
     display: flex;
     flex-direction: column;
+
+    color: rgb(160, 174, 224);
+    background-color: rgb(55, 67, 83);
 }
 
 .calc-display {
-    width: 360px;
-
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
 
-    flex: 2 296px;
+    flex: 2;
 }
 
 .screen {
-    font-size: 32px;
-    margin-bottom: 32px;
+    font-size: 48px;
+    margin: 32px 16px;
 }
 
 .calc-body {
-    width: 360px;
-
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 
-    flex: 3 444px;
+    flex: 3;
+}
+
+.row-buttons {
+    display: flex;
+    gap: 16px;
+
+    margin: 0 16px;
+}
+
+.calc-button {
+    color: rgb(248, 249, 249);
+    background-color: inherit;
+
+    font-size: 24px;
+    padding: 16px;
+
+    border: none;
+    border-radius: 16px;
+
+    box-shadow: 2px 2px 16px rgb(32, 48, 64);
+
+    flex: 1;
+}
+
+.calc-button:active {
+    transform: translate(1px, 2px);
+}
+
+.action-button {
+    color: rgb(101, 114, 144);
+}
+
+.last-button {
+    flex: 2;
 }
