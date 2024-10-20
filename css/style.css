@@ -44,8 +44,13 @@ body {
 }
 
 .screen {
+    display: flex;
+    gap: .2rem;
+
     font-size: 3rem;
     margin: 2rem 1rem;
+
+    overflow: hidden;
 }
 
 .calc-body {
@@ -74,6 +79,7 @@ body {
     border-radius: 1rem;
 
     box-shadow: .125rem .125rem 1rem rgb(32, 48, 64);
+    outline: none;
 
     flex: 1;
 }
