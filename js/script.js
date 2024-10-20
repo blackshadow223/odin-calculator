@@ -8,6 +8,10 @@ calcBody.addEventListener("click", (event) => {
         ||
         event.target.classList.contains("calc-body")) return;
 
+    if (isNaN(parseInt(leftVar.textContent))) {
+        leftVar.textContent = "0";
+    }
+
     let value = event.target.textContent;
     let Var = leftVar;
     if (operator.textContent) {
