@@ -64,21 +64,33 @@ calcBody.addEventListener("click", (event) => {
 function operate(operator, left, right) {
     left = parseFloat(left);
     right = parseFloat(right);
+    let solution = 0;
     switch (operator) {
         case "+":
-            return left + right;
+            solution = left + right;
+            break;
 
         case "-":
-            return left - right;
+            solution = left - right;
+            break;
 
         case "x":
-            return left * right;
+            solution = left * right;
+            break;
 
         case "/":
-            if (right === 0) return "What are you doing, man?";
-            return left / right;
+            if (right === 0) return "What are you even doing?";
+            solution = left / right;
+            break;
 
         case "%":
-            return left / 100;
+            solution = left / 100;
+            break;
     }
+
+    if (`${solution}`.length > 8) {
+        solution = Math.round(1000000 * solution) / 1000000;
+    }
+
+    return solution;
 }
