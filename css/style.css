@@ -16,19 +16,23 @@ body {
     justify-content: center;
     align-items: center;
 
+    background-color: rgb(55, 67, 83);
+
     font-family: "Roboto", sans-serif;
 }
 
 /* Calculator UI */
 .calc {
-    width: 360px;
+    width: 22.5rem;
     height: 100vh;
 
     display: flex;
     flex-direction: column;
 
-    color: rgb(160, 174, 224);
-    background-color: rgb(55, 67, 83);
+    color: rgb(249, 249, 249);
+
+    border: .125rem solid rgb(160, 174, 224);
+    border-radius: 1rem;
 }
 
 .calc-display {
@@ -40,8 +44,8 @@ body {
 }
 
 .screen {
-    font-size: 48px;
-    margin: 32px 16px;
+    font-size: 3rem;
+    margin: 2rem 1rem;
 }
 
 .calc-body {
@@ -54,32 +58,32 @@ body {
 
 .row-buttons {
     display: flex;
-    gap: 16px;
+    gap: 1rem;
 
-    margin: 0 16px;
+    margin: 0 1rem;
 }
 
 .calc-button {
-    color: rgb(248, 249, 249);
+    color: rgb(249, 249, 249);
     background-color: inherit;
 
-    font-size: 24px;
-    padding: 16px;
+    font-size: 1.5rem;
+    padding: 1rem;
 
     border: none;
-    border-radius: 16px;
+    border-radius: 1rem;
 
-    box-shadow: 2px 2px 16px rgb(32, 48, 64);
+    box-shadow: .125rem .125rem 1rem rgb(32, 48, 64);
 
     flex: 1;
 }
 
 .calc-button:active {
-    transform: translate(1px, 2px);
+    transform: translate(.0625rem, .125rem);
 }
 
 .action-button {
-    color: rgb(101, 114, 144);
+    color: rgb(160, 174, 224);
 }
 
 .last-button {
