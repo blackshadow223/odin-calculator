@@ -3,7 +3,37 @@ const calcBody = document.querySelector(".calc-body");
 const leftVar = document.querySelector(".leftVar");
 const operator = document.querySelector(".operator");
 const rightVar = document.querySelector(".rightVar");
-calcBody.addEventListener("click", (event) => {
+
+document.addEventListener("keyup", (event) => {
+    console.log(event.key);
+    // Make up a false object that behaves as if it is an event
+    const falseEvent = {
+        target: {
+            textContent: event.key, classList: {
+                contains() {
+                    return false;
+                }
+            }
+        }
+    };
+
+    // Do some adjustments to map keyboard to other DOM events
+    if (event.key === "Escape") {
+        falseEvent.target.textContent = "C";
+    } else if (event.key === "Enter") {
+        falseEvent.target.textContent = "=";
+    } else if (event.key === "*") {
+        falseEvent.target.textContent = "x";
+    }
+
+    calc(falseEvent);
+})
+
+
+
+calcBody.addEventListener("click", calc);
+
+function calc(event) {
     if (event.target.classList.contains("row-buttons")
         ||
         event.target.classList.contains("calc-body")) return;
@@ -59,7 +89,7 @@ calcBody.addEventListener("click", (event) => {
             rightVar.textContent = "";
         }
     }
-});
+}
 
 function operate(operator, left, right) {
     left = parseFloat(left);
