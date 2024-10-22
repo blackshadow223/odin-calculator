@@ -5,7 +5,6 @@ const operator = document.querySelector(".operator");
 const rightVar = document.querySelector(".rightVar");
 
 document.addEventListener("keyup", (event) => {
-    console.log(event.key);
     // Make up a false object that behaves as if it is an event
     const falseEvent = {
         target: {
@@ -24,6 +23,8 @@ document.addEventListener("keyup", (event) => {
         falseEvent.target.textContent = "=";
     } else if (event.key === "*") {
         falseEvent.target.textContent = "x";
+    } else if (event.key === "Backspace") {
+        falseEvent.target.id = "delete";
     }
 
     calc(falseEvent);
@@ -88,6 +89,8 @@ function calc(event) {
             operator.textContent = "";
             rightVar.textContent = "";
         }
+    } else if (event.target.id === "delete" || event.target.id === "feather-delete") {
+        Var.textContent = Var.textContent.substring(0, Var.textContent.length - 1);
     }
 }
 
