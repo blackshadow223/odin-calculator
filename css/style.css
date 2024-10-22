@@ -85,7 +85,7 @@ body {
 }
 
 .calc-button:active {
-    transform: translate(.0625rem, .125rem);
+    transform: translate(.125rem, .25rem);
 }
 
 .action-button {
